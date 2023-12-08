@@ -1,0 +1,47 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model Deseases {
+  id             Int     @id @default(autoincrement())
+  deseaseName    String?
+  damagedArea    Decimal
+  externalDecay  Decimal
+  cankerLesion   Decimal
+  fruitSpots     Decimal
+  cropHist       Decimal
+  fruitingBodies Decimal
+  fruitPods      Decimal
+  germination    Decimal
+  hail           Decimal
+  intDiscolor    Decimal
+  leafMalf       Decimal
+  leafMild       Decimal
+  leafShread     Decimal
+  leafSpotsHalo  Decimal
+  leafSpotsSize  Decimal
+  leafSpotsMarg  Decimal
+  leaves         Decimal
+  lodging        Decimal
+  moldGrowth     Decimal
+  mycelium       Decimal
+  plantGrowth    Decimal
+  plantStand     Decimal
+  precip         Decimal
+  roots          Decimal
+  sclerotia      Decimal
+  seedDiscolor   Decimal
+  severity       Decimal
+  seedTmt        Decimal
+  stem           Decimal
+  stemCanker     Decimal
+  months         Decimal
+  temps          Decimal
+
+  @@index([deseaseName])
+}
